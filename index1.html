@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>Fitness Tracker</h1>
+        <div class="footer-menu">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('register')">Register</button>
+            <button onclick="showPage('login')">Login</button>
+            <button onclick="logout()">Logout</button>
+            <button onclick="showPage('exit')">Exit</button>
+        </div>
+        
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div id="home" class="container">
+            <h2>Welcome to the Fitness Tracker</h2>
+            <p>By Rifath Azmatullah</p>
+            <p>2023001545</p>
+            <a href="Resume.jpeg" target="_blank" class="resume-link">View Resume</a>
+        </div>
+
+        <div id="login" class="container" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="login_username" placeholder="Name" required>
+            <input type="password" id="login_password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+        
+        <div id="register" class="container" style="display: none;">
+            <h2>Register</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <input type="text" id="year" placeholder="Year" required>
+            <input type="text" id="section" placeholder="Section" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            <button onclick="register()">Register</button>
+            <button onclick="downloadExcel()">Download Excel</button>
+        </div>
+
+        
+
+        <div id="exit" class="container" style="display: none;">
+            <h2>Thank You for Visiting the Fitness Tracker!</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
